@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  ctf-saas:
+    container_name: ctf-saas
+    restart: on-failure
+    image: $IMAGE_TAG
+    # image: ctf-saas
+    ports:
+      - "9000:80"
+    volumes:
+      - /home/ubuntu/nfs/ctf-challenges/volumes/saas:/var/www/html
